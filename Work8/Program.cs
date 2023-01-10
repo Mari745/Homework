@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Введите число:");
-int number = 14212;
+int number = Convert.ToInt32(Console.ReadLine());
 
 if (number % 100 == ((number /1000)+9))
 {
