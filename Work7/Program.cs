@@ -1,5 +1,5 @@
-﻿Console.WriteLine("Введите число от 1 до 7:");
-int dayNumber = 9;
+﻿Console.WriteLine("Введите число от 1 до 7: ");
+int dayNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(WorkHoliday(dayNumber));
 int ReadInt(string message)
 {
