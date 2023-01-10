@@ -1,19 +1,12 @@
-﻿Console.WriteLine("Введите число: ");
-string number = Console.ReadLine();
-int len = number.Length;
+﻿Console.WriteLine("Введите число:");
+int number = 14212;
 
-if (len == 5)
+if (number % 100 == ((number /1000)+9))
 {
-    if (number[0] == number[4] && number[1] == number[3])
-    {
-        Console.WriteLine($"{number} - Палиндром");
-    }
-    else
-    {
-        Console.WriteLine($"{number} - НЕ палиндром");
-    }
+   Console.WriteLine("{0} Палиндром" , number);
 }
-else
+else 
 {
-    Console.WriteLine($"ОШИБКА: {number} - не является пятизначным");
+    Console.WriteLine("{0} Не палиндром", number);
 }
+Console.ReadLine();
