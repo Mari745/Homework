@@ -4,16 +4,13 @@ int ValueInput()
     Console.Write("Введите число:");
     return Convert.ToInt32(Console.ReadLine());
 }
-
 //2 Создание массива
 int[] CreateArray(int size)
 {
     int[] array = new int[size];
     return array;
 }
-
 //3 Заполнение массива
-
 
 void FillArray(int[] collection)
 {
@@ -25,7 +22,6 @@ void FillArray(int[] collection)
    }
 }
 //4 Печать массива
-
 string PrintArray(int[] Numbers)
 {
     string output = String.Empty;
@@ -52,7 +48,6 @@ int DramHouse(int[] arrBin)
 {
     return $"{String.Join("", bin)} >> {dec}";
 }
-
 int number = ValueInput();
 int[] arr = CreateArray(number);
 FillArray(arr);
