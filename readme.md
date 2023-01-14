@@ -69,3 +69,7 @@ string GoodPrint(int[] bin, int dec)
 return $"{String.Join("", bin)} >> {dec}";
 }
 [Блок-схема](Work11/11.drawio.png)  [Код](Work11/Program.cs)
+
+## Задача 12
+###  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+[Блок-схема](Work12/12.drawio.png)  [Код](Work12/Program.cs)
