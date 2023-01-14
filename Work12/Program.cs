@@ -7,23 +7,23 @@ int ReadInt(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
-int NumberLen(int a)
+int NumberLen(int test)
 {
     int index = 0;
-    while (a > 0)
+    while (test > 0)
     {
-        a /= 10;
+        test /= 10;
         index++;
     }
     return index;
 }
-void SumNumbers(int n, int len)
+void SumNumbers(int ben, int len)
 {
     int sum = 0;
     for (int i = 1; i <= len; i++)
     {
-        sum += n % 10;
-        n /= 10;
+        sum += ben % 10;
+        ben /= 10;
     }
     Console.WriteLine(sum);
 }
