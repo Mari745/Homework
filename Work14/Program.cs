@@ -20,7 +20,7 @@ void FillArray(int[] collection)
      int count = collection.Length;
     for (int i = 0; i < count; i++)
    {
-    collection[i] = Random.Shared.Next(9);
+    collection[i] = Random.Shared.Next(10);
     collection[0] = 1;
    }
 }
