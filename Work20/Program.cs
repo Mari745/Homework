@@ -3,9 +3,9 @@
 
 
 //Ввод
-int strok = ReadInt("Введите количество строк: ");
-int stolb = ReadInt("Введите количество столбцов: ");
-int[,] numbers = new int[strok, stolb];
+int rows = ReadInt("Введите количество строк: ");
+int columns = ReadInt("Введите количество столбцов: ");
+int[,] numbers = new int[rows, columns];
 FillArrayD(numbers);
 PrintArrayD(numbers);
 NumberArray(numbers);
@@ -25,13 +25,13 @@ void FillArrayD(int[,] collection)
 //Минимальная сумма строки
 void NumberArray(int[,] array)
 {
-int minStrok = 0;
-int minSumStrok = 0;
+int minRows = 0;
+int minSumRows = 0;
 int minSum= 0;;
 
 for (int i = 0; i < numbers.GetLength(1); i++)
 {
-    minStrok += numbers[0, i];
+    minRows += numbers[0, i];
 }
 for (int i = 0; i < numbers.GetLength(0); i++)
    {
@@ -39,14 +39,14 @@ for (int i = 0; i < numbers.GetLength(0); i++)
     
         minSum += numbers[i, j];
     
-     if (minSum < minStrok)
+     if (minSum < minRows)
      {
-            minStrok = minSum;
-            minSumStrok = i;
+            minRows = minSum;
+            minSumRows = i;
         }
         minSum = 0;
     }
-    Console.Write($"{minSumStrok + 1} строка");
+    Console.Write($"{minSumRows + 1} строка");
 }
 
 //Печать массива
