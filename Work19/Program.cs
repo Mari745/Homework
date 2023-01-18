@@ -15,13 +15,13 @@ PrintArrayD(numbers);
 //Заполнение массива
 
 void FillArrayD(int[,] collection)
-{ 
+{
     for (int i = 0; i < collection.GetLength(0); i++)
     {
-         for (int j = 0; j < collection.GetLength(1); j++)
-         {
-            collection[i, j] = new Random().Next(1,10);
-         }
+        for (int j = 0; j < collection.GetLength(1); j++)
+        {
+            collection[i, j] = new Random().Next(1, 10);
+        }
     }
 }
 //Среднеарифмет столцов
@@ -41,15 +41,15 @@ PrintArray(avgNumbers);
 //Печать массива
 void PrintArrayD(int[,] array)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      Console.Write(array[i, j] + " ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
     }
     Console.WriteLine();
-  }
-  Console.WriteLine();
 }
 //Вывод массива
 void PrintArray(double[] array)
