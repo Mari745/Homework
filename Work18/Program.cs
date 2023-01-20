@@ -6,14 +6,13 @@
 //17 -> такого числа в массиве нет
 
 //Ввод строк и столбцов
-int strok = ReadInt("Введите количество строк: ");
-int stolb = ReadInt("Введите количество столбцов: ");
-double[,] numbers = new double[strok, stolb];
+int rows = ReadInt("Введите количество строк: ");
+int columns = ReadInt("Введите количество столбцов: ");
+double[,] numbers = new double[rows, columns];
 FillArray(numbers);
 PrintArray(numbers);
 
-if (strok < numbers.GetLength(0) && stolb < numbers.GetLength(1)) Console.WriteLine(numbers[strok, stolb]);
-else Console.WriteLine($"{strok}{stolb} -> такого числа в массиве нет");
+
 //Заполнение массива
 
 void FillArray(double[,] collection)
@@ -25,6 +24,29 @@ void FillArray(double[,] collection)
             collection[i, j] = new Random().Next(1, 10);
         }
     }
+}
+
+Console.Write("Введите индекс строки нужного элемента: ");
+int index_i = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите индекс столбца нужного элемента: ");
+int index_j = Convert.ToInt32(Console.ReadLine());
+for (int i = 0; i < numbers.GetLength(0); i++)
+{
+    if (index_i == i + 1)
+    {
+        for (int j = 0; j < numbers.GetLength(1); j++)
+        {
+            if (index_j == j + 1)
+            {
+                Console.WriteLine($"Значение [{index_i}, {index_j}] элемента массива: {numbers[i, j]}");
+            }
+        }
+    }
+
+}
+if (index_i > numbers.GetLength(0) || index_j > numbers.GetLength(1))
+{
+    Console.WriteLine("Указанного элемента в данном массиве нет!");
 }
 
 //Печать массива
@@ -47,3 +69,6 @@ int ReadInt(string message)
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+
+
